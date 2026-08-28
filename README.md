@@ -69,21 +69,21 @@ La persistencia se maneja de forma automática:
 -Al iniciar la aplicación, los objetos son reconstruidos en memoria a partir de los datos almacenados en la carpeta `datos`.
 
 ## Excepciones Controladas
--`FileNotFoundError`: Retorna colecciones vacías si los archivos JSON aún no se han creado.  
--`json.JSONDecodeError`: Captura archivos JSON corruptos o no válidos.  
--`PermissionError`: Controla fallos de lectura o escritura por falta de permisos en el sistema operativo.  
--`KeyError`: Detecta claves faltantes durante la conversión de diccionarios JSON a objetos.  
--`ValueError`: Impide la creación o actualización con montos, cantidades o números no válidos o vacíos.  
+-`FileNotFoundError`: Retorna colecciones vacías si los archivos JSON aún no se han creado.    
+-`json.JSONDecodeError`: Captura archivos JSON corruptos o no válidos.    
+-`PermissionError`: Controla fallos de lectura o escritura por falta de permisos en el sistema operativo.    
+-`KeyError`: Detecta claves faltantes durante la conversión de diccionarios JSON a objetos.    
+-`ValueError`: Impide la creación o actualización con montos, cantidades o números no válidos o vacíos.    
 
 ## Forma de Ejecución
 Ejecutar el archivo principal desde la terminal: `python main.py`.
 
 ## Pruebas Realizadas
 -Comprobación de Persistencia Inicial: Creación de usuarios y productos, cierre y reapertura del sistema comprobando que
-los datos persistieran correctamente.
+los datos persistieran correctamente.  
 -Venta Válida: Venta de 2 unidades sobre un producto con stock de 54. Se comprobó la reducción del stock a 52, la creación 
-del registro en `ventas.json` y la correcta asignación al usuario.
+del registro en `ventas.json` y la correcta asignación al usuario.  
 -Venta Inválida (Stock Insuficiente): Intento de venta de una cantidad superior al stock restante. El sistema rechazó la 
-transacción, conservando intactos los registros y el stock actual. 
+transacción, conservando intactos los registros y el stock actual.   
 -Consulta de Ventas: Filtrado de compras por usuario validando la correcta recuperación e iteración de la colección de 
-ventas.
+ventas.  
