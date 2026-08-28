@@ -28,14 +28,19 @@ restaurante_app/
 └── README.md
 ```
 ## Responsabilidad de los Componentes
--`modelos/producto.py`: Define la clase `Producto`, maneja encapsulamiento, atributos (incluyendo `stock`), métodos de 
+-`modelos/producto.py`: Define la clase `Producto`, maneja encapsulamiento, atributos (incluyendo `stock`), métodos de   
 deserialización/serialización y control de inventario.
+
 -`modelos/usuario.py`: Define la clase `Usuario` y sus validaciones.
+
 -`modelos/venta.py`: Representa la transacción entre un `Usuario` y un `Producto` (`usuario_id, producto_codigo, cantidad`).
+
 -`servicios/archivo_servicio.py`: Encargado de leer y escribir en los archivos JSON (`productos.json, usuarios.json, ventas.json`) 
 usando `json.dump()` y `json.load()`.
+
 -`servicios/restaurante.py`: Centraliza las colecciones en memoria, aplica reglas de negocio (validar datos, procesar ventas, 
 reducir stock, filtrar ventas por usuario) y coordina la actualización en archivos.
+
 -`main.py`: Interfaz por consola que interactúa con el usuario y realiza llamadas exclusivas a los métodos del servicio
 `Restaurante`.
 
